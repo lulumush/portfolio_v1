@@ -18,9 +18,29 @@ a{
     text-decoration: none;
     cursor: pointer;
 }
-/*------------------------------------------------*/
-/*-------------------- Navbar --------------------*/
-/*------------------------------------------------*/
+section{
+    padding: 0 50px;
+    width: calc(100% - 300px);
+    margin-left: auto;
+}
+h3{
+    text-transform: uppercase;
+}
+@media screen and (max-width:1300px) {
+    section{
+        width:100%;
+    }
+}
+@media screen and (max-width:1000px) {
+    section{
+        padding: 0 30px;
+    }
+}
+
+
+/*-------------------------------------------------------------------*/
+/*------------------------------ Navbar -----------------------------*/
+/*-------------------------------------------------------------------*/
 .nav-left{
     width: 300px;
     height: 100vh;
@@ -37,8 +57,12 @@ a{
     transition: all 0.2s ease-in-out;
     padding: 10px 0;
 }
-.block-nav-avatar img{
-    width: 150px;
+.block-nav-logo{
+    font-size: 25px;
+}
+.block-nav-logo span{
+    text-transform: uppercase;
+    color: #B0ACD0;
 }
 .block-nav{
     display: flex;
@@ -78,12 +102,15 @@ a{
         min-height: 300px;
         justify-content: center;
     }
+    .block-nav-logo{
+       display: none;
+    }
     .nav-visible{
         left: 0px!important;
     }
     .nav-button{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border: 1px solid #f1f1f1;
         border-radius: 50%;
         background: #27272a;
@@ -142,7 +169,7 @@ a{
     .button-container.active .button-container-line{
         background: transparent;
     }
-    .block-nav-avatar, .block-nav-contact{
+    .block-nav-contact{
         display: none;
     }
 }
@@ -168,9 +195,9 @@ a{
     }
 }
 
-/*------------------------------------------------------*/
-/*-------------------- Home section --------------------*/
-/*------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*------------------------------ Home section ------------------------------*/
+/*--------------------------------------------------------------------------*/
 
 /* headings */
 .home{
@@ -180,9 +207,6 @@ a{
     background-position: center;
     height: 100vh;
     min-height: 800px;
-    width: calc(100% - 300px);
-    margin-left: auto;
-    padding: 0 50px;
     position: relative;
 }
 h1{
@@ -254,16 +278,10 @@ h1{
     height: 30px;
 }
 /* tablet and phone navbar display */
-@media screen and (max-width: 1300px) {
-    .home{
-        width: 100%;
-    }
-}
 @media screen and (max-width: 1000px) {
     .home{
         height: 700px;
         min-height: 0;
-        padding: 0 30px;
     }
     h1{
         font-size: 70px;
@@ -314,3 +332,65 @@ h1{
         height: 20px;
     }
 }
+
+/*---------------------------------------------------------------------------*/
+/*------------------------------ About section ------------------------------*/
+/*---------------------------------------------------------------------------*/
+.about{
+    border:0px solid;
+    padding-bottom: 50px;
+}
+.about h3{
+    font-size: 30px;
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+}
+.about h3::after{
+    content: "";
+    position: absolute;
+    height:2px;
+    width:100px;
+    background-color: #f1f1f1;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.about-container{
+    display: flex;
+    justify-content: center;
+    gap:130px;
+}
+.about-text{
+    flex: 2;
+}
+.about-interest{
+    flex:1;
+}
+.about-interest-list{
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+.about-interest-list-item{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 20px;
+}
+.about-interest-list-item div{
+    font-family: 'Poppins', sans-serif;
+}
+/* tablet/phone display */
+@media screen and (max-width: 1000px) {
+    .about-interest-list-item{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about-container{
+        gap:70px;
+        flex-direction: column;
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/*------------------------------ skills section ------------------------------*/
+/*----------------------------------------------------------------------------*/
