@@ -1,3 +1,6 @@
+/*-------------------------------------------------*/
+/*-------------------- General --------------------*/
+/*-------------------------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -12,11 +15,12 @@ body{
     color: #f1f1f1;
 }
 a{
+    text-decoration: none;
     cursor: pointer;
 }
-/*----------------------------*/
-/*---------- Navbar ----------*/
-/*----------------------------*/
+/*------------------------------------------------*/
+/*-------------------- Navbar --------------------*/
+/*------------------------------------------------*/
 .nav-left{
     width: 300px;
     height: 100vh;
@@ -33,7 +37,6 @@ a{
     transition: all 0.2s ease-in-out;
     padding: 10px 0;
 }
-
 .block-nav-avatar img{
     width: 150px;
 }
@@ -49,7 +52,6 @@ a{
     justify-content: center;
 }
 .block-nav div a{
-    text-decoration: none;
     color: #f1f1f1;
     font-size: 20px;
 }
@@ -68,7 +70,6 @@ a{
 .block-nav-contact img{
     width: 50px;
 }
-
 /* tablet and phone navbar display */
 @media screen and (max-width:1300px) {
     .nav-left{
@@ -81,8 +82,8 @@ a{
         left: 0px!important;
     }
     .nav-button{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border: 1px solid #f1f1f1;
         border-radius: 50%;
         background: #27272a;
@@ -143,5 +144,173 @@ a{
     }
     .block-nav-avatar, .block-nav-contact{
         display: none;
+    }
+}
+@media screen and (max-width:450px) {
+    .nav-button{
+        width: 40px;
+        height: 40px;
+    }
+    .button-container{
+        width: 20px;
+        height: 20px;
+    }
+    .button-container-line{
+        height: 2px;
+    }
+    .button-container-line::before{
+        bottom: 5px;
+        height: 2px;
+    }
+    .button-container-line::after{
+        top: 5px;
+        height: 2px;
+    }
+}
+
+/*------------------------------------------------------*/
+/*-------------------- Home section --------------------*/
+/*------------------------------------------------------*/
+
+/* headings */
+.home{
+    background: url("assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    min-height: 800px;
+    width: calc(100% - 300px);
+    margin-left: auto;
+    padding: 0 50px;
+    position: relative;
+}
+h1{
+    font-size: 90px;
+    font-family: 'Abril Fatface', sans-serif;
+    color:#f1f1f1;
+    padding-top: 180px;
+}
+.home h2{
+    font-size: 30px;
+    margin: 10px 0 10px 0;
+
+}
+.home-btn{
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+    font-size: 20px;
+    transition: all 0.4s ease-in-out;
+    background-color: #18181b;
+    color: #f1f1f1;
+}
+.home-btn:hover{
+    background-color: #f1f1f1;
+    color:#18181b;
+}
+.home-socials{
+    display: flex;
+    margin-top: 20px;
+}
+.home-socials-icon{
+    width: 60px;
+    height: 60px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-socials-icon img{
+    width: 30px;
+    height: 30px;
+}
+/* arrow down button */
+.arrow-down{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;  
+    box-shadow: 0 0 0 0 #18181b;
+    background: #18181b;
+    animation: pulse 1.3s infinite;
+}
+@keyframes pulse{
+    to {
+       box-shadow: 0 0 0 10px rgba(24,24,27, 0.01); 
+    }
+}
+.arrow-down img{
+    width: 30px;
+    height: 30px;
+}
+/* tablet and phone navbar display */
+@media screen and (max-width: 1300px) {
+    .home{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .home{
+        height: 700px;
+        min-height: 0;
+        padding: 0 30px;
+    }
+    h1{
+        font-size: 70px;
+        padding-top: 100px;
+    }
+    .arrow-down{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .home{
+        height: 600px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    .home h2{
+        font-size: 20px;
+    }
+    .home-btn{
+        width: 120px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .home{
+        padding: 0 15px;
+        height: 500px;
+    }
+    h1{
+        font-size: 35px;
+        padding-top: 100px;
+    }
+    .home h2{
+        font-size: 16px;
+    }
+    .home-btn{
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .home-socials-icon{
+        width: 40px;
+        height: 40px;
+    }
+    .home-socials-icon img{
+        width: 20px;
+        height: 20px;
     }
 }
