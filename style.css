@@ -19,12 +19,26 @@ a{
     cursor: pointer;
 }
 section{
-    padding: 0 50px;
+    padding: 50px;
     width: calc(100% - 300px);
     margin-left: auto;
 }
 h3{
     text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+h3::after{
+    content: "";
+    position: absolute;
+    height:2px;
+    width:100px;
+    background-color: #f1f1f1;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-50%);
 }
 @media screen and (max-width:1300px) {
     section{
@@ -33,10 +47,12 @@ h3{
 }
 @media screen and (max-width:1000px) {
     section{
-        padding: 0 30px;
+        padding: 50px 30px;
+    }
+    h3{
+        font-size: 20px;
     }
 }
-
 
 /*-------------------------------------------------------------------*/
 /*------------------------------ Navbar -----------------------------*/
@@ -170,7 +186,11 @@ h3{
         background: transparent;
     }
     .block-nav-contact{
-        display: none;
+        position: absolute;
+        bottom:5px;
+    }
+    .block-nav-contact img{
+        width: 40px;
     }
 }
 @media screen and (max-width:450px) {
@@ -208,18 +228,21 @@ h3{
     height: 100vh;
     min-height: 800px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
+
 h1{
     font-size: 90px;
     font-family: 'Abril Fatface', sans-serif;
     color:#f1f1f1;
-    padding-top: 180px;
+    /* padding-top: 130px; */
 }
 .home h2{
     font-size: 30px;
-    margin: 10px 0 10px 0;
-
+    margin: 10px 0;
 }
+
 .home-btn{
     display: inline-flex;
     width: 200px;
@@ -260,6 +283,7 @@ h1{
     height: 60px;
     position: absolute;
     bottom: 10px;
+    left: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -285,7 +309,7 @@ h1{
     }
     h1{
         font-size: 70px;
-        padding-top: 100px;
+        /* padding-top: 90px; */
     }
     .arrow-down{
         display: none;
@@ -308,12 +332,11 @@ h1{
 }
 @media screen and (max-width: 450px) {
     .home{
-        padding: 0 15px;
         height: 500px;
     }
     h1{
+        /* padding-top: 50px; */
         font-size: 35px;
-        padding-top: 100px;
     }
     .home h2{
         font-size: 16px;
@@ -337,24 +360,7 @@ h1{
 /*------------------------------ About section ------------------------------*/
 /*---------------------------------------------------------------------------*/
 .about{
-    border:0px solid;
-    padding-bottom: 50px;
-}
-.about h3{
-    font-size: 30px;
-    text-align: center;
-    margin: 60px 0;
     position: relative;
-}
-.about h3::after{
-    content: "";
-    position: absolute;
-    height:2px;
-    width:100px;
-    background-color: #f1f1f1;
-    bottom: 0px;
-    left:50%;
-    transform: translateX(-50%);
 }
 .about-container{
     display: flex;
@@ -391,6 +397,51 @@ h1{
     }
 }
 
+
 /*----------------------------------------------------------------------------*/
 /*------------------------------ skills section ------------------------------*/
 /*----------------------------------------------------------------------------*/
+.skills{
+    background: #151517;    
+}
+.skills-container{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    justify-items: center;
+    gap:10px;
+}
+.skills-card{
+    padding: 10px;
+}
+.skills-card-label{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.skills-card-level{
+    display: flex;
+    gap:10px;
+}
+.level{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+.full{
+    background: #B0ACD0;
+}
+/* tablet and phone display */
+@media screen and (max-width: 450px){
+    .skills-container{
+        grid-template-columns:  repeat(1, 1fr);
+    } 
+    .level{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid;
+    }
+    .skills-card-label{
+        font-size: 18px;
+    }
+}

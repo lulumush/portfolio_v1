@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucie Sundermeijer | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <!-- tablet/phone nav button display -->
     <div class="nav-button">
         <div class="button-container">
@@ -33,11 +35,11 @@
                 <a href="#projects">Projets</a>
             </div>
             <div class="block-nav-item">
-                <a href="#contact">Contact</a>
+                <a href="#">C.V.</a>
             </div>
         </div>
         <div class="block-nav-contact">
-            <a href="#">
+            <a href="mailto:lucie.sunder@gmail.com">
                 <img src="assets/contact.svg" alt="icône de contact">
             </a>
         </div>
@@ -45,24 +47,26 @@
 
     <!-- Home section -->
     <section id="home" class="home">
-        <h1>Bienvenue sur mon portfolio</h1>
-        <h2>Lucie Sundermeijer, développeuse Front-End junior.</h2>
-        <a href="#" class="home-btn projects">Projets</a>
-        <a href="#" class="home-btn contact">Contact</a>
-
-        <div class="home-socials">
-            <a href="https://github.com/lulumush/" target="_blank">
-                <div class="home-socials-icon github">
-                    <img src="assets/github.png" alt="icône github">
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/lucie-sundermeijer/" target="_blank">
-                <div class="home-socials-icon linkedin">
-                    <img src="assets/linkedin.svg" alt="icône linkedin">
-                </div>
-            </a>
+        <div class="home-container">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <h2>Lucie Sundermeijer, développeuse Front-End junior.</h2>
+            <a href="#" class="home-btn projects">Projets</a>
+            <a href="mailto:lucie.sunder@gmail.com" class="home-btn contact">Contact</a>
+            <!-- socials -->
+            <div class="home-socials">
+                <a href="https://github.com/lulumush/" target="_blank">
+                    <div class="home-socials-icon github">
+                        <img src="assets/github.png" alt="icône github">
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/lucie-sundermeijer/" target="_blank">
+                    <div class="home-socials-icon linkedin">
+                        <img src="assets/linkedin.svg" alt="icône linkedin">
+                    </div>
+                </a>
+            </div>
         </div>
-
+        <!-- arrow down -->
         <a href="#about">
             <div class="arrow-down">
                 <img src="assets/arrowDown.svg" alt="icône flèche bas">
@@ -76,8 +80,10 @@
         <div class="about-container">
             <div class="about-text">
                 <p>Je m'appelle Lucie et je suis une développeuse Front-End junior, basée en Nouvelle-Aquitaine.</p><br>
-                 <p>Après avoir exercé un tout autre métier ces dix dernières années, j'ai décidé de retourner vers mon métier d'origine et donc de faire une reconversion professionnelle.</p><br> 
-                <p>Je suis une personne motivée, désireuse d'enrcichir mes connaissances et mes compétences en tant que développeuse Front-End.</p>
+                <p>Après avoir exercé un tout autre métier ces dix dernières années, j'ai décidé de retourner vers mon
+                    métier d'origine et donc de faire une reconversion professionnelle.</p><br>
+                <p>Je suis une personne motivée, désireuse d'enrcichir mes connaissances et mes compétences en tant que
+                    développeuse Front-End.</p>
             </div>
             <div class="about-interest">
                 <h4>J'aime aussi:</h4>
@@ -94,8 +100,106 @@
                 </ul>
             </div>
         </div>
+
     </section>
+
+    <!-- Skills section -->
+    <section class="skills">
+        <h3>Mes Compétences</h3>
+        <div class="skills-container">
+            <div class="skills-card">
+                <p class="skills-card-label">HTML</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">CSS</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">JavaScript</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">TypeScript</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">Tailwind CSS</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">Bootstrap</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">React JS</p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <p class="skills-card-label">Next.JS</span></p>
+                <div class="skills-card-level">
+                    <div class="level full"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                    <div class="level empty"></div>
+                </div>
+            </div>
+            <!-- <img src="assets/html5.svg" alt="icône html">
+            <img src="assets/css3.svg" alt="icône css">
+            <img src="assets/javascript.svg" alt="icône javascript">
+            <img src="assets/typescript.svg" alt="icône typescript">
+            <img src="assets/bootstrap.svg" alt="icône bootstrap">
+            <img src="assets/tailwindcss.svg" alt="icône tailwind css">
+            <img src="assets/react.svg" alt="icône react js">
+            <img src="assets/nextdotjs.svg" alt="icône next js"> -->
+        </div>
+    </section>
+
 
     <script src="app.js"></script>
 </body>
+
 </html>
