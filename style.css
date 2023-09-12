@@ -11,8 +11,8 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background: #18181b;
-    color: #f1f1f1;
+    color: #27272a;
+    background-color: #f1f1f1;
 }
 a{
     text-decoration: none;
@@ -35,7 +35,7 @@ h3::after{
     position: absolute;
     height:2px;
     width:80px;
-    background-color: #f1f1f1;
+    background-color: #27272a;
     bottom: 0px;
     left:50%;
     transform: translateX(-50%);
@@ -58,10 +58,11 @@ h3::after{
 /*------------------------------ Navbar -----------------------------*/
 /*-------------------------------------------------------------------*/
 .nav-left{
+    box-shadow: 1px 0 30px 0 rgba(0, 0, 0, 0.1);
     width: 300px;
     height: 100vh;
     min-height: 650px;
-    background: #27272a;
+    background: #ffffff;
     position: fixed;
     top: 0;
     left: -300px;
@@ -75,6 +76,9 @@ h3::after{
 }
 .block-nav-logo{
     font-size: 25px;
+}
+.block-nav-logo a{
+    color: #27272a;
 }
 .block-nav-logo span{
     text-transform: uppercase;
@@ -92,7 +96,7 @@ h3::after{
     justify-content: center;
 }
 .block-nav div a{
-    color: #f1f1f1;
+    color: #27272a;
     font-size: 20px;
 }
 .block-nav div::after{
@@ -221,10 +225,6 @@ h3::after{
 
 /* headings */
 .home{
-    background: url("assets/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     min-height: 800px;
     position: relative;
@@ -235,7 +235,7 @@ h3::after{
 h1{
     font-size: 90px;
     font-family: 'Abril Fatface', sans-serif;
-    color:#f1f1f1;
+    color:#27272a;
     /* padding-top: 130px; */
 }
 .home h2{
@@ -258,12 +258,13 @@ h1{
     height: 100%;
     transition: all 0.4s ease-in-out;
     font-size: 20px;
-    background-color: #18181b;
+    background-color: #27272a;
     color: #f1f1f1;
+    border: 2px solid #27272a;
 }
 .home-btn span:hover{
     background-color: #f1f1f1;
-    color:#18181b;
+    color:#27272a;
 }
 .home-socials{
     display: flex;
@@ -272,7 +273,6 @@ h1{
 .home-socials-icon{
     width: 60px;
     height: 60px;
-    background: #f1f1f1;
     border-radius: 50%;
     margin-right: 20px;
     display: flex;
@@ -280,8 +280,8 @@ h1{
     align-items: center;
 }
 .home-socials-icon img{
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 /* arrow down button */
 .arrow-down{
@@ -293,8 +293,8 @@ h1{
     display: flex;
     justify-content: center;
     align-items:center ;  
-    box-shadow: 0 0 0 0 #18181b;
-    background: #18181b;
+    box-shadow: 0 0 0 0 #27272a;
+    background: #27272a;
     animation: pulse 1.3s infinite;
 }
 @keyframes pulse{
@@ -366,7 +366,15 @@ h1{
 /*---------------------------------------------------------------------------*/
 .about{
     position: relative;
+    background-color: #ffffff;
 }
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+
 .about-container{
     display: flex;
     justify-content: center;
@@ -389,6 +397,18 @@ h1{
 .about-interest-list-item div{
     font-family: 'Poppins', sans-serif;
 }
+
+.about-skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.about-skills div{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+}
 /* tablet/phone display */
 @media screen and (max-width: 1000px) {
     .about-interest-list-item{
@@ -402,55 +422,6 @@ h1{
     }
 }
 
-
-/*----------------------------------------------------------------------------*/
-/*------------------------------ skills section ------------------------------*/
-/*----------------------------------------------------------------------------*/
-.skills{
-    background: #151517;    
-}
-.skills-container{
-    display: grid;
-    grid-template-columns:  repeat(2, 1fr);
-    justify-items: center;
-    gap:10px;
-}
-.skills-card{
-    padding: 10px;
-}
-.skills-card-label{
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-.skills-card-level{
-    display: flex;
-    gap:10px;
-}
-.level{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid;
-}
-.full{
-    background: #B0ACD0;
-}
-/* tablet and phone display */
-@media screen and (max-width: 450px){
-    .skills-container{
-        grid-template-columns:  repeat(1, 1fr);
-    } 
-    .level{
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        border: 2px solid;
-    }
-    .skills-card-label{
-        font-size: 18px;
-    }
-}
-
 /*----------------------------------------------------------------------------*/
 /*------------------------------ projects section ------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -460,7 +431,7 @@ h1{
     gap:60px
 }
 .projects-card{
-    background: #27272a;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     transition: all 0.1s ease-out;
@@ -492,13 +463,13 @@ h1{
 .projects-card-links a{
     background: #f1f1f1;
     padding: 5px 10px;
-    color: #18181b;
+    color: #27272a;
     font-weight: 700;
     transition: all 0.4s ease-in-out;
 }
 .projects-card-links a:hover{
     color: #f1f1f1;
-    background: #18181b;
+    background: #27272a;
 }
 /* tablet and phone display */
 @media screen and (max-width: 1400px) {

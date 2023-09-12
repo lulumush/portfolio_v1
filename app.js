@@ -9,7 +9,7 @@ btnNav.addEventListener('click', () => {
     nav.classList.toggle('nav-visible')
 })
 
-if(window.matchMedia('(max-width: 1300px)')) {
+if (window.matchMedia('(max-width: 1300px)')) {
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             nav.classList.toggle('nav-visible')
@@ -26,23 +26,19 @@ const btnDown = document.querySelector('.arrow-down')
 const timeLineHome = gsap.timeline()
 
 
-timeLineHome 
-.to(navbar, {
-    left: 0,
-})
-.from("h1, h2", {
-    opacity:0,
-    y:-50,
-    stagger:0.2,
-})
-.from(".home-btn, .home-socials-icon", {
-    opacity:0,
-    stagger:0.2,
-})
-.from(btnDown, {
-    opacity:0,
-    y:-50,
-}, "-=1")
+timeLineHome
+    .to(navbar, {
+        left: 0,
+    })
+    .from("h1, h2, .home-btn, .home-socials-icon", {
+        opacity: 0,
+        y: -50,
+        stagger: 0.1,
+    })
+    .from(btnDown, {
+        opacity: 0,
+        y: -50,
+    }, "-=1")
 
 window.addEventListener('load', () => {
     timeLineHome.play();
@@ -60,43 +56,29 @@ const timeLineAbout = gsap.timeline({
     }
 })
 timeLineAbout
-.from(".about h3, .about-text", {
-    opacity: 0,
-    duration: 1.5,
-    delay: 0.2,
-    stagger:0.2,
-})
-.from(".about-interest h4, .about-interest-list-item", {
-    opacity: 0,
-    y: -20,
-    duration: 0.4,
-    stagger:0.2,
-}, "-=1.5")
-
- //skills section anim
- const timeLineSkills = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".skills",
-      start:"top 70%"
-    }
-})
-timeLineSkills
-.from(".skills h3, .skills-card", {
-    opacity: 0,
-    delay: 0.2,
-    stagger:0.2
-})
+    .from(".about h3, .about-text, .about-skills", {
+        opacity: 0,
+        duration: 1.5,
+        delay: 0.2,
+        stagger: 0.2,
+    })
+    .from(".about-interest h4, .about-interest-list-item", {
+        opacity: 0,
+        y: -20,
+        duration: 0.2,
+        stagger: 0.2,
+    }, "-=2")
 
 //projects section anim
 const timeLineProjects = gsap.timeline({
     scrollTrigger: {
-      trigger: ".projects",
-      start:"top 70%"
+        trigger: ".projects",
+        start: "top 70%"
     }
 })
 timeLineProjects
-.from(".projects h3, .projects-container", {
-    opacity: 0,
-    duration: 1.5,
-    delay: 0.2,
-})
+    .from(".projects h3, .projects-container", {
+        opacity: 0,
+        duration: 1.5,
+        delay: 0.2,
+    })
